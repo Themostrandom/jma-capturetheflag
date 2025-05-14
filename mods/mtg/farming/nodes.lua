@@ -179,7 +179,7 @@ end
 minetest.register_abm({
 	label = "Farming soil",
 	nodenames = {"group:field"},
-	interval = 5,
+	interval = 15,
 	chance = 4,
 	action = function(pos, node)
 		local n_def = minetest.registered_nodes[node.name] or nil
@@ -236,7 +236,7 @@ for i = 1, 5 do
 	minetest.override_item("default:grass_"..i, {drop = {
 		max_items = 1,
 		items = {
-			{items = {"farming:seed_wheat"}, rarity = 3},
+			{items = {"farming:seed_wheat"}, rarity = 2},
 			{items = {"default:grass_1"}},
 		}
 	}})
